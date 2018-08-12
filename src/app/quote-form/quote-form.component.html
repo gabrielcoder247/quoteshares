@@ -1,0 +1,29 @@
+
+
+<div class="container-fluid" id='container-section'>
+    <div class="row">
+            <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+            <div class="form-group">
+                <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" placeholder="Your name..">
+            <!--Testing  to see if we get data-->
+                 <!-- <ul>
+                   <li>{{newQuote.name}}</li>
+                   <li>{{newQuote.author}}</li>
+                   <li>{{newQuote.name}}</li>
+                  </ul> -->
+
+            </div>
+            <div class="form-group">
+                    <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="name" placeholder="Author's name..">
+                <!--Testing  to see if we get data-->
+                   
+    
+                </div>
+            <div class="form-group">
+                <textarea class="form-control" id="quotestr" name="quotestr" rows="4" required placeholder="write your quote here..."  [(ngModel)]="newQuote.quotestr"></textarea> 
+            </div>
+            
+            <button type="submit" class="btn btn-success btn-lg">submit</button>
+        </form>
+    </div>
+</div>

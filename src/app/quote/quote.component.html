@@ -1,0 +1,81 @@
+<div class="container-fluid">
+<div class='jumbotron header-div'>
+<h1 id='header'>QuoteShare</h1>
+</div>
+<hr>
+<div class='input-field'>
+
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    
+</div>
+
+<div class = 'container'>
+    <div class="row">
+
+    
+
+      <div class="col-md-12 container2">
+                  
+          
+        <div *ngFor="let quote of quotes; let i=index" class="row">
+          
+    
+                  <!-- <div class="quoteString">
+                    <span id='box-shadow'>
+                    <p class="quote" appHighlight *ngIf="getHigh()===quote.upvotes && quote.upvotes>0">
+                      {{quote.quote}}
+                    </p>
+                    <p class="quote" *ngIf="getHigh()!==quote.upvotes || quote.upvotes===0">
+                      <li >
+                        
+                      </li>
+                    </p>
+                  </span>
+                  </div> -->
+    
+                  <!-- <app-quote-details (quote)="quote"></app-quote-details> -->
+                  <div class="vote">
+                    <div class= 'display'>
+                    <span class = quoteDetails>
+                      <ul>
+                        <li>{{quote.quotestr}}</li>
+
+                          <li >{{quote.name}} posted a quote on {{quote.timePosted|date}}</li> 
+                              <li >Authored by:{{quote.author}}</li>
+                                  
+                  </ul>
+                </span>
+              </div>
+                    <div class="btn btn-info count">{{getVotes(i)}}</div>
+                    <div class="btn btn-success upvote" (click)="upvote(i)">Upvote ({{quote.upvotes}}) </div>
+                    <div class="btn btn-danger downvote" (click)="downvote(i)">downvote ({{quote.downvotes}})</div>
+
+                    <button class="btn btn-warning del" (click)="deleteQuote(i)">Delete Quote</button>
+                  </div>
+    
+                  
+                    
+              
+              
+    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="/"> Quoteshare.com</a>
+          </div>
+      <p>courtesy of gabrielcoder developer int'l</p>
+    </div>
+        
+    </div>
+ 
+
+
+        
+            
+              
+    
