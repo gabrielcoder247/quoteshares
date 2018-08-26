@@ -13,8 +13,7 @@ export class QuoteComponent implements OnInit {
   quotes:any = [
     new Quote(1,'Watch Finding Nemo','play footabll',12,5, 'eefef',new Date(2018,3,14)),
     new Quote(2,'Buy Cookies', 'watch movies', 34,34,'kbkfj fj',new Date(2018,3,14)),
-    // new Quote(3, 'Get new Phone Case','cook beans',23,45,'e fbkj ',new Date(2018,3,14)),
-    // new Quote(4, 'Get Dog Food','go to the market',23,45,'shhbchb',new Date(2018,3,14)),
+  
     
 
 ]
